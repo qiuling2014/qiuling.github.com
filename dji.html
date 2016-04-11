@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>大疆移动端列表切换交换实现</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width,initial-scale=1,minimum-scale=1">
+    <style media="screen">
+      body{
+        background-color: #f1f1f1;
+        margin: 0;
+      }
+      ul{
+        list-style: none;
+      }
+      button:focus{
+        outline: none;
+      }
+      .header{
+        height: 50px;
+        background: #141414;
+      }
+      .list{
+        padding:10px;
+        margin: 0;
+      }
+      .item{
+        width: 100%;
+        height: 150px;
+        float: left;
+        background: #fff;
+        transition: all 500ms ease-in-out;
+        border: 8px solid #f1f1f1;
+        box-sizing: border-box;
+        font-size: 38px;
+        text-align: center;
+        line-height: 150px;
+      }
+      .syle-2 .item{
+        width: 33.33%;
+        height: 100px;
+        line-height: 100px;
+      }
+      .syle-2 .item:nth-child(3n){
+        margin-right: 0;
+      }
+      .btn-wrap{
+        padding: 15px;
+        background: #fff;
+      }
+      .btn-wrap:after{
+        content: " ";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        clear: both;
+      }
+      .btn-1,.btn-2{
+        border: none;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        float: right;
+        margin-left: 10px;
+      }
+      .btn-1{
+        background-image: url('http://7xpwoh.com1.z0.glb.clouddn.com/16-4-10/75918961.jpg');
+      }
+      .btn-1.active{
+        background-image: url('http://7xpwoh.com1.z0.glb.clouddn.com/16-4-10/54605204.jpg');
+      }
+      .btn-2{
+        background-image: url('http://7xpwoh.com1.z0.glb.clouddn.com/16-4-10/852965.jpg');
+      }
+      .btn-2.active{
+        background-image: url('http://7xpwoh.com1.z0.glb.clouddn.com/16-4-10/13578968.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="btn-wrap">
+      <button class="j-btn btn-2"></button>
+      <button class="j-btn btn-1 active"></button>
+    </div>
+    <ul class="list">
+      <li class="item">1</li>
+      <li class="item">2</li>
+      <li class="item">3</li>
+      <li class="item">4</li>
+      <li class="item">5</li>
+      <li class="item">6</li>
+      <li class="item">7</li>
+      <li class="item">8</li>
+      <li class="item">9</li>
+      <li class="item">10</li>
+    </ul>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+    <script type="text/javascript">
+      $('.j-btn').on('click', function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        if($(this).hasClass('btn-2')){
+          $('.list').addClass('syle-2');
+        }else{
+          $('.list').removeClass('syle-2');
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>锤子砸金蛋效果实现</title>
+    <style media="screen">
+      .egg{
+        position: relative;
+        width: 200px;
+        height: 175px;
+        background: url('http://static.smartisanos.cn/store/asset/img/easter/t2-egg.png');
+        cursor: url('http://static.smartisanos.cn/store/asset/img/easter/mouse-icon-normal.png'),default;
+      }
+      .egg:active {
+        cursor: url('http://static.smartisanos.cn/store/asset/img/easter/mouse-icon-click.png'),default;
+      }
+      .egg-crack{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .click-1{
+        background: url("http://static.smartisanos.cn/store/asset/img/easter/banner-egg-crack-1.png") no-repeat;
+      }
+      .click-2{
+        background: url("http://static.smartisanos.cn/store/asset/img/easter/banner-egg-crack-2.png") no-repeat;
+      }
+      .click-3{
+        background: url("http://static.smartisanos.cn/store/asset/img/easter/banner-egg-crack-3.png") no-repeat;
+      }
+      .suprise-egg{
+        background: url('http://static.smartisanos.cn/store/asset/img/easter/banner-egg-broken.png') no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="egg">
+      <span class="egg-crack js-click"></span>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+    <script type="text/javascript">
+      $('.js-click').on('click', function(){
+        if(!$(this).hasClass('click-1')){
+          $(this).addClass('click-1');
+        }else if(!$(this).hasClass('click-2')){
+          $(this).addClass('click-2');
+        }else if(!$(this).hasClass('click-3')){
+          $(this).addClass('click-3');
+        }else{
+          $(this).removeClass('click-3');
+          $(this).removeClass('click-2');
+          $(this).removeClass('click-1');
+          $(this).off('click');
+          $('.egg').addClass('suprise-egg');
+        }
+      })
+    </script>
+  </body>
+</html>
