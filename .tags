@@ -1,0 +1,32 @@
+fly	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^  $.fly = function (element, options) {$/;"	function	line:10
+fly.defaults.version	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    var defaults = {$/;"	property	line:12
+fly.defaults.autoPlay	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^      version: '1.0.0',$/;"	property	line:13
+fly.defaults.vertex_Rtop	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^      autoPlay: true,$/;"	property	line:14
+fly.defaults.speed	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^      vertex_Rtop: 20, \/\/ 默认顶点高度top值$/;"	property	line:15
+fly	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^\/*$/;"	function	line:0
+init	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    self.init = function (options) {$/;"	function	line:28
+self.init	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^      $element = $(element);$/;"	class	line:23
+setOptions	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    self.setOptions = function (options) {$/;"	function	line:36
+self.setOptions	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    };$/;"	class	line:31
+play	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    self.play = function () {$/;"	function	line:85
+self.play	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    };$/;"	class	line:80
+move	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    self.move = function () {$/;"	function	line:92
+self.move	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    };$/;"	function	line:87
+destroy	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    self.destroy = function(){$/;"	function	line:130
+self.destroy	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^    };$/;"	function	line:125
+fly	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^  $.fn.fly = function (options) {$/;"	function	line:138
+$.fn.fly	/Users/ling/develop/qiuling.github.com/boom/parabola.js	/^  };$/;"	function	line:135
+html	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^<html>$/;"	function	line:2
+head	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^  <head>$/;"	function	line:3
+meta	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <meta charset="utf-8">$/;"	function	line:4
+title	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <title>boom shakalaka<\/title>$/;"	function	line:5
+style	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <style media="screen">$/;"	function	line:6
+body	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^  <body>$/;"	function	line:61
+img	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <img class="img j-click" src="ec.png"><\/img>$/;"	function	line:62
+div	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <div class="dot-wrap"><\/div>$/;"	function	line:63
+div	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <div id="target"><\/div>$/;"	function	line:64
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script src="http:\/\/cdn.bootcss.com\/jquery\/3.0.0-beta1\/jquery.js"><\/script>$/;"	function	line:65
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script src="parabola.js"><\/script>$/;"	function	line:66
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script type="text\/javascript">$/;"	function	line:68
+init	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^        function init(){$/;"	function	line:91
+addProduct	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^        function addProduct(){$/;"	function	line:100

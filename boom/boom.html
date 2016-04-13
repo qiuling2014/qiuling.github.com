@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>boom shakalaka</title>
+    <style media="screen">
+      .img{
+        width: 69px;
+        height: 89px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -35px;
+        margin-left: -45px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      @keyframes shake {
+        from {
+          transform: scale3d(1, 1, 1) translate3d(0,0,0);
+        }
+        22% {
+          transform: translate3d(5%,0%,0);
+        }
+        45% {
+          transform: translate3d(-5%,0%,0);
+        }
+        66% {
+          transform: translate3d(0,-5%,0);
+        }
+        88% {
+          transform: translate3d(0,5%,0);
+        }
+        to {
+          transform: scale3d(0.3, 0.3, 0.3) translate3d(0,-150%,0);
+        }
+      }
+      .shake {
+        animation: shake 0.3s both ease;
+      }
+      .dot-wrap{
+        width: 69px;
+        height: 89px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -35px;
+        margin-left: -45px;
+        z-index: 1;
+        display: none;
+      }
+      .dot{
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="img j-click" src="ec.png"></img>
+    <div class="dot-wrap"></div>
+    <div id="target"></div>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+    <script src="parabola.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        init();
+
+        $('.j-click').on('click', function(){
+          $('.img').addClass('shake');
+          setTimeout(function(){
+            $('.img').hide();
+            $('.dot-wrap').show();
+            addProduct();
+          },300)
+        });
+
+        $('img').load("./ec.png",function(){
+          // console.log(this);
+        });
+
+        $('.dot div').each(function(idx,item){
+          var left = Math.random()*20+'px';
+          var top = Math.random()*20+'px';
+          $(item).css({'marginLeft': left, 'marginTop': top});
+        });
+
+        function init(){
+          var str;
+          var wrap = $('.dot-wrap')
+          for(var i=0; i<200; i++){
+            str = '<div class="dot" style="background-image: url('+'ec.png'+');background-size: 69px 89px;top:'+(Math.floor(Math.random()*20))+'px;left:'+(Math.floor(Math.random()*30)+10)+'px;background-position:'+(Math.random()*50+10)+'px '+(Math.random()*70+10)+'px;"></div>';
+            wrap.append(str);
+          }
+        }
+
+        function addProduct(){
+          var flyer = $('.dot');
+          for (var i = 0; i < flyer.length; i++) {
+            if(i%2==0){
+              var left = $(flyer[i]).offset().left-(Math.floor(Math.random()*100));
+            }else{
+              var left = $(flyer[i]).offset().left+(Math.floor(Math.random()*100));
+            }
+            if(id = Math.ceil(Math.random()*2)==1){
+              var top = $(flyer[i]).offset().top-(Math.floor(Math.random()*30));
+            }else{
+              var top = $(flyer[i]).offset().top+(Math.floor(Math.random()*50));
+            }
+            $(flyer[i]).fly({
+              start: {
+                left: $(flyer[i]).offset().left,
+                top: $(flyer[i]).offset().top
+              },
+              end: {
+                left: left,
+                top: top,
+                width: 6,
+                height: 6,
+                opacity: 0
+              },
+              speed: Math.random()+1,
+              vertex_Rtop: 150
+            });
+          }
+        }
+
+      })
+    </script>
+
+  </body>
+</html>

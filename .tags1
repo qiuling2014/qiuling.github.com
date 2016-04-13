@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+html	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^<html>$/;"	function	line:2
+head	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^  <head>$/;"	function	line:3
+meta	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <meta charset="utf-8">$/;"	function	line:4
+title	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <title>boom shakalaka<\/title>$/;"	function	line:5
+style	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <style media="screen">$/;"	function	line:6
+body	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^  <body>$/;"	function	line:61
+img	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <img class="img j-click" src="ec.png"><\/img>$/;"	function	line:62
+div	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <div class="dot-wrap"><\/div>$/;"	function	line:63
+div	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <div id="target"><\/div>$/;"	function	line:64
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script src="http:\/\/cdn.bootcss.com\/jquery\/3.0.0-beta1\/jquery.js"><\/script>$/;"	function	line:65
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script src="parabola.js"><\/script>$/;"	function	line:66
+script	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^    <script type="text\/javascript">$/;"	function	line:68
+init	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^        function init(){$/;"	function	line:91
+addProduct	/Users/ling/develop/qiuling.github.com/boom/boom.html	/^        function addProduct(){$/;"	function	line:100
