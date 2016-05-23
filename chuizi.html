@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>锤子砸金蛋效果实现</title>
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <style media="screen">
       .egg{
         position: relative;
@@ -38,9 +41,15 @@
     </style>
   </head>
   <body>
-    <div class="egg">
-      <span class="egg-crack js-click"></span>
+
+    <div class="page-group">
+      <div class="page">
+        <div class="egg">
+          <span class="egg-crack js-click"></span>
+        </div>
+      </div>
     </div>
+
     <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
     <script type="text/javascript">
       $('.js-click').on('click', function(){
