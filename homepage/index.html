@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>code homepage</title>
+    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body class="homepage">
+    <!-- header -->
+    <header><button class="setting"></button></header>
+
+    <!-- content -->
+    <content>
+      <!-- search -->
+      <div class="search-wrap">
+        <div class="serch-content">
+          <form action="http://www.baidu.com/baidu" target="_blank">
+            <input type="text" id="search-text" placeholder="search..." name='word' size='30' /><button type="submit" id="search-btn"></button>
+          </form>
+        </div>
+      </div>
+      <!-- links -->
+      <ul class="links-wrap">
+        <li class="link"><a href="http://www.qq.com/" target="_blank"><i></i><span>腾讯网</span></a></li>
+        <li class="link"><a href="http://www.yinyuetai.com/" target="_blank"><i></i><span>音悦台</span></a></li>
+        <li class="link"><a href="http://www.iqiyi.com/" target="_blank"><i></i><span>爱奇艺</span></a></li>
+        <li class="link"><a href="http://www.xiamp4.com/" target="_blank"><i></i><span>迅播影院</span></a></li>
+        <li class="link"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E5%B9%BF%E5%B7%9Efc" target="_blank"><i></i><span>广州FC</span></a></li>
+        <li class="link"><a href="https://www.amazon.cn" target="_blank"><i></i><span>亚马逊</span></a></li>
+        <li class="link"><a href="http://www.jd.com/" target="_blank"><i></i><span>京东</span></a></li>
+        <li class="link"><a href="http://www.w3school.com.cn/" target="_blank"><i></i><span>w3school</span></a></li>
+        <li class="link"><a href="https://www.tmall.com/" target="_blank"><i></i><span>天猫</span></a></li>
+        <li class="link"><a href="http://www.zhihu.com/" target="_blank"><i></i><span>知乎</span></a></li>
+        <li class="link"><a href="http://www.w3cfuns.com/" target="_blank"><i></i><span>W3Cfuns</span></a></li>
+        <li class="link"><a href="http://www.bilibili.com/" target="_blank"><i></i><span>哔哩哔哩</span></a></li>
+      </ul>
+    </content>
+
+    <!-- copyright -->
+    <footer class="copyright">Copyright © 2016 - 2016 Qiuling. All Rights Reserved</footer>
+
+    <script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
+    <script type="text/javascript">
+     	var txtObj = document.getElementById("search-text");
+    	//回调函数，用于获取用户当前选择的文字
+     	function show(str){
+    		txtObj.val = str;
+    	}
+    	var params = {
+      	"XOffset": -2, //提示框位置横向偏移量,单位px
+      	"YOffset": -1, //提示框位置纵向偏移量,单位px
+      	"width": 436, //提示框宽度，单位px
+      	"fontColor":"#333", //提示框文字颜色
+      	"fontColorHI":"#333",	//提示框高亮选择时文字颜色
+      	"fontSize":"14px",		//文字大小
+      	"borderColor":"#ddd", 	//提示框的边框颜色
+      	"bgcolorHI":"#ddd",		//提示框高亮选择的颜色
+      	"sugSubmit":true		//在选择提示词条是是否提交表单
+    	};
+
+     	BaiduSuggestion.bind("search-text",params,show); //百度搜索提词
+    </script>
+  </body>
+</html>
