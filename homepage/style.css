@@ -63,6 +63,7 @@ ul {
   box-shadow: 1px 1px 5px #bbb inset;
   vertical-align: middle;
   border: none;
+  font-size: 18px;
 }
 .homepage #search-btn {
   vertical-align: middle;
