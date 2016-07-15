@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>你够了，小朋友</title>
+    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://www.zuidaima.com/html/1695882735602688/css/default.css" media="screen" title="no title" charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no, minimal-ui">
+    <style media="screen">
+      body{
+        margin: 20px
+      }
+      #code {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+    	<div id="content">
+    		<div id="code">
+    			<span class="comments">/**</span><br />
+    			<span class="space"/><span class="comments">* 2016—07-15</span><br />
+          <span class="space"/><span class="comments">* 天气挺好</span><br />
+          <span class="space"/><span class="comments">* 今天星期五呀！明天不上班</span><br />
+    			<span class="space"/><span class="comments">*/</span><br />
+    			var name = <span class="keyword">Miss.</span>Wu (吴佳蔓)<br />
+    			<span class="comments">// hello 小蔓.</span><br />
+    			你够了，小朋友;<br />
+    			<span class="comments">// 😂😂😂</span><br />
+    			祝你周末愉快;<br />
+    			<span class="comments">// 今天是入职的第34天</span><br />
+    			马上就要转正了是不是很开心呀;<br />
+    			<span class="comments">// 为什么我还没转正😭</span><br />
+    			公司福利真的好好诶，每天都要下午茶;<br />
+    			<span class="comments">// 好忙呀，解不完的bug，做不完的项目😭</span><br />
+    			<span class="comments"> 好了就这样吧，编不下去了</span><br />
+    			<span class="keyword">祝：</span> 你<span class="keyword">开心快来</span>生活工作<span class="keyword">每一天</span>。<br />
+
+    			<span class="comments">form: Ling.Q</span><br /><br />
+
+          <img src="./img.jpg" alt="" />
+    		</div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="http://www.zuidaima.com/html/1695882735602688/js/jquery.js"></script>
+
+    <script type="text/javascript">
+      (function($) {
+        $.fn.typewriter = function() {
+          this.each(function() {
+            var $ele = $(this), str = $ele.html(), progress = 0;
+            $ele.html('');
+            var timer = setInterval(function() {
+              var current = str.substr(progress, 1);
+              if (current == '<') {
+                progress = str.indexOf('>', progress) + 1;
+              } else {
+                progress++;
+              }
+              $ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+              if (progress >= str.length) {
+                clearInterval(timer);
+              }
+            }, 75);
+          });
+          return this;
+        };
+      })(jQuery);
+    </script>
+
+    <script type="text/javascript">
+
+      $("#code").typewriter();
+
+    </script>
+  </body>
+</html>
